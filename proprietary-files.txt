@@ -8,6 +8,13 @@ vendor/lib/libfastcvopt.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+etc/acdbdata/Bluetooth_cal.acdb
+etc/acdbdata/General_cal.acdb
+etc/acdbdata/Global_cal.acdb
+etc/acdbdata/Handset_cal.acdb
+etc/acdbdata/Hdmi_cal.acdb
+etc/acdbdata/Headset_cal.acdb
+etc/acdbdata/Speaker_cal.acdb
 
 # Bluetooth
 bin/hci_qcomm_init
@@ -17,7 +24,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.vendor.msm8974.so
+lib/hw/camera.msm8974.so
 lib/libalmalib.so
 lib/libalmcascore.so
 lib/libalmcaswrap.so
@@ -27,6 +34,8 @@ lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so
 lib/libmorpho_image_stab31.so
++priv-app/LGCameraApp/lib/arm/libmorpho_panorama_gp.so:lib/libmorpho_panorama_gp.so
++priv-app/LGCameraApp/lib/arm/libmorpho_memory_allocator.so:lib/libmorpho_memory_allocator.so
 lib/libmorpho_noise_reduction.so
 lib/libmorpho_video_denoiser.so
 lib/libqomx_core.so
@@ -112,12 +121,15 @@ etc/firmware/DLdata_rev28B_data2.ecl
 etc/firmware/DLdata_rev28B_data3.ecl
 
 # DRM
+lib/drm/libdrmwvmplugin.so
+vendor/lib/liboemcrypto.so
 vendor/lib/libdrmdecrypt.so
 vendor/lib/libwvm.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+app/Videos/lib/arm/libWVphoneAPI.so:vendor/lib/libWVphoneAPI.so
 
 # Sensors
 bin/sensors.qcom
@@ -131,6 +143,7 @@ lib/libloc_ds_api.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk:priv-app/com.qualcomm.location.apk
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so
@@ -158,6 +171,7 @@ etc/firmware/a330_pm4.fw
 # Media
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
+vendor/lib/libDivxDrm.so
 
 # Perf
 bin/mpdecision
@@ -176,7 +190,6 @@ bin/irsc_util
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--app/shutdownlistener/shutdownlistener.apk
 bin/radish
 lib/librmnetctl.so
 vendor/lib/libsmemlog.so
@@ -204,14 +217,3 @@ bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 -app/TimeService/TimeService.apk
-
-# WCNSS
-vendor/firmware/wcnss.b00
-vendor/firmware/wcnss.b01
-vendor/firmware/wcnss.b02
-vendor/firmware/wcnss.b04
-vendor/firmware/wcnss.b06
-vendor/firmware/wcnss.b07
-vendor/firmware/wcnss.b08
-vendor/firmware/wcnss.b09
-vendor/firmware/wcnss.mdt
