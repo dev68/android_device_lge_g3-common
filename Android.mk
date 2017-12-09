@@ -21,6 +21,12 @@ ifneq ($(filter g3 d850 d851 d852 d855 d858 ls990 vs985 f400, $(TARGET_DEVICE)),
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
+LOCAL_MODULE            := init.class_main.sh
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := etc/init.class_main.sh
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
 
 define vfatfilename
 $(foreach f,$(1),$(shell echo $(f) | \
